@@ -1,0 +1,75 @@
+# Django core
+django==5.2.1
+dj-database-url==1.3.0
+python-dotenv==0.19.1
+
+# PostgreSQL support
+psycopg2-binary==2.9.6
+
+# Form rendering
+django-crispy-forms==1.13.0
+crispy-bootstrap5==0.6
+
+# UI tweaks
+django-widget-tweaks==1.4.8
+
+# Live reload for development
+django-livereload-server==0.3.2
+
+# Dash integration
+django-plotly-dash==1.6.5
+
+# Multi-select field support
+django-multiselectfield==0.1.12
+
+# AWS S3 media storage support
+boto3==1.26.110
+botocore==1.29.110
+django-storages==1.13.2
+s3transfer==0.6.0
+
+# PDF generation
+xhtml2pdf==0.2.5
+PyPDF2==1.26.0
+reportlab==3.6.3
+pydyf==0.1.2
+python-bidi==0.4.2
+arabic-reshaper==2.1.3
+pyphen==0.11.0
+html5lib==1.1
+tinycss2==1.1.1
+cssselect2==0.4.1
+webencodings==0.5.1
+
+# Crontab for scheduled tasks
+python-crontab==2.6.0
+
+# General utility dependencies
+requests==2.26.0
+pytz==2021.1
+python-dateutil==2.8.2
+idna==3.3
+urllib3==1.26.7
+charset-normalizer==2.0.7
+certifi==2021.10.8
+
+# Optional/used by Dash or others
+numpy==1.24.2
+pandas==1.3.3
+plotly==5.3.1
+kaleido==0.2.1
+dash==2.0.0
+dash-core-components==2.0.0
+dash-html-components==2.0.0
+dash-renderer==1.9.1
+dash-table==5.0.0
+
+# Whitenoise for static file handling
+whitenoise==6.4.0
+
+# Optional enhancements
+gunicorn==20.1.0
+Werkzeug==2.0.1
+
+# If needed for selenium automation
+selenium==4.0.0
