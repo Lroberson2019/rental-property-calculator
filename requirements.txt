@@ -89,3 +89,36 @@ whitenoise==6.4.0
 wsproto==1.0.0
 xhtml2pdf==0.2.5
 zopfli==0.1.9
+# Django core
+django==5.2.1
+dj-database-url
+python-dotenv
+
+# PostgreSQL support
+psycopg2-binary
+
+# Form rendering
+django-crispy-forms
+crispy-bootstrap5
+
+# UI tweaks
+django-widget-tweaks
+
+# Live reload for development
+django-livereload-server
+
+# Dash integration
+django-plotly-dash
+
+# Multi-select field support
+django-multiselectfield
+
+# AWS S3 media storage support
+boto3
+django-storages
+
+# PDF generation
+xhtml2pdf
+
+# Crontab for scheduled tasks
+python-crontab
