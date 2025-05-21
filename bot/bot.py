@@ -1,5 +1,6 @@
 # 3rd party imports
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 
@@ -27,7 +28,7 @@ class RedfinBot():
         "download.prompt_for_download": False,
         })
         chrome_options.add_argument("--headless")
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(service=Service(), options=chrome_options)
         self.driver.command_executor._commands["send_command"] = \
             ("POST", '/session/$sessionId/chromium/send_command')
         params = {
