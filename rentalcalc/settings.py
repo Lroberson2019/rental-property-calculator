@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'livereload',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
-    'multiselectfield',
+    'django_multiselectfield',
     'storages',
     
     # django apps
