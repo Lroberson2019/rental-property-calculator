@@ -1,7 +1,10 @@
 # 3rd party imports
 from selenium import webdriver
+from selenium.webdriver.common.by import By  # add this import at top
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 # my files
@@ -24,8 +27,8 @@ class RedfinBot():
         # allows chrome to download csv file in headless mode
         chrome_options = Options()
         chrome_options.add_experimental_option("prefs", {
-        "download.default_directory": "/Users/garrettlesher/Downloads/",
-        "download.prompt_for_download": False,
+            "download.default_directory": "/Users/garrettlesher/Downloads/",
+            "download.prompt_for_download": False,
         })
         chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(service=Service(), options=chrome_options)
@@ -44,10 +47,15 @@ class RedfinBot():
         print("Opening webpage with search URL...")
         self.driver.get(self.url)
         sleep(2)
-        self.driver.find_element_by_xpath("//a[@id=\"download-and-save\"]")\
-            .click()
+
+        # Add WebDriverWait to wait until the element is clickable
+        wait = WebDriverWait(self.driver, 10)  # Wait for up to 10 seconds
+        download_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@id='download-and-save']")))
+        download_button.click()
+
         print("Downloading csv file...")
         sleep(5)
+
 
     def parse_csv_data(self):
         """Parses csv file downloaded in 'webdriver' function above"""
